@@ -1,0 +1,5 @@
+{
+    "image_service_port": 5007, 
+    "result_service_port": 5008,
+    "loopback_ip": "127.0.0.1"
+}
