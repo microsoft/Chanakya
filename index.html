@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Chanakya: Learning Runtime Decisions for Adaptive Real-Time Perception</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!--     <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+  <!-- <link rel="icon" type="image/png" href="img/seal_icon.png"> -->
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="web_utils/css/app.css">
+
+    <link rel="stylesheet" href="web_utils/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script src="web_utils/js/app.js"></script>
+
+    <link rel="icon" type="image/x-icon" href="/images/Microsoft_logo.svg.png">
+
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <h2 class="col-md-12 text-center">
+                <b>Chanakya: Learning Runtime Decisions for Adaptive Real-Time Perception</br></b>
+            </h2>
+        </div>
+        <div class="row">
+            <h3 class="col-md-12 text-center">
+                <b>NeurIPS 2023</br></b>
+            </h3>
+        </div>
+        <div class="row">
+            <table style="width:100%;max-width:1000px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+                <tr style="padding:0px">
+                  <td style="padding:0px">
+                    <table style="width:85%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+                      <tr style="padding:0px">
+                        <td style="padding:0%;width:63%;vertical-align:middle">
+                          <p style="text-align-last:justify">
+                          <a href="https://anuragxel.github.io" style="font-size: 1.8em; text-decoration: none;">Anurag Ghosh</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+                          <a href="https://profile.vballoli.com" style="font-size: 1.8em; text-decoration: none;">Vaibhav Balloli</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+                          <a href="https://www.microsoft.com/en-us/research/people/akshayn/" style="font-size: 1.8em; text-decoration: none;">Akshay Nambi</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+                          <a href="" style="font-size: 1.8em; text-decoration: none;">Aditya Singh</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+                          <a href="https://www.microsoft.com/en-us/research/people/taganu/" style="font-size: 1.8em; text-decoration: none;">Tanuja Ganu</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+                        </p>
+                        <p style="text-align:center"><a href="https://www.microsoft.com/en-us/research/lab/microsoft-research-india/"  style="font-size: 1.5em; text-decoration: none;">Microsoft Research</a></p>
+                        </td>
+                      </tr>
+            </tbody></table>
+        </div>
+
+        <div class="row">
+            <p style="text-align: center">
+                <a href="https://openreview.net/forum?id=VpCjozUOM2" style="font-size: 1.3em; text-decoration: none;">[Paper]</a>
+                <a href="https://github.com/microsoft/chanakya" style="font-size: 1.3em; text-decoration: none;">[Code]</a>
+                <a href="https://aka.ms/chanakya" style="font-size: 1.3em; text-decoration: none;">[Talk]</a>
+            </p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <h3>
+                    Abstract
+                </h3>
+                <p class="text-justify">
+                    Real-time perception requires planned resource utilization. Computational planning in real-time perception is governed by two considerations - accuracy and latency. There exist run-time decisions (e.g. choice of input resolution) that induce tradeoffs affecting performance on a given hardware, arising from intrinsic (content, e.g. scene clutter) and extrinsic (system, e.g. resource contention) characteristics. Earlier runtime execution frameworks employed rule-based decision algorithms and operated with a fixed algorithm latency budget to balance these concerns, which is sub-optimal and inflexible. We propose <tt>Chanakya</tt>, a learned approximate execution framework that naturally derives from the streaming perception paradigm, to automatically learn decisions induced by these tradeoffs instead. <tt>Chanakya</tt> is trained via novel rewards balancing accuracy and latency implicitly, without approximating either objectives. <tt>Chanakya</tt> simultaneously considers intrinsic and extrinsic context, and predicts decisions in a flexible manner. <tt>Chanakya</tt>, designed with low overhead in mind, outperforms state-of-the-art static and dynamic execution policies on public datasets on both server GPUs and edge devices
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <h3>
+                    Our Framework
+                </h3>
+                <p class="text-justify">
+                <center></center> 
+                </p>                
+                <br>
+                <center>
+                    <img width="80%" src="images/overall.png"></img>
+                </center>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <h3>
+                    <b>Result:</b> Performance improvement without additional model training
+                </h3>
+                <p class="text-justify">
+                <center></center> 
+                </p>                
+                <br>
+                <center>
+                    <img width="80%" src="images/sapvsmap.jpg">
+                </center>
+                </img>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <h3>
+                    <b>Insight:</b> Configurations chosen are adaptive
+                </h3>
+                <p class="text-justify">
+                <center>On a Server-class GPU like V100, <tt>Chanakya</tt> learns to select configurations that can improve streaming perception performance </center> 
+                </p>                
+                <br>
+                <center>
+                    <img width="80%" src="images/v100.png">
+                </center>
+                </img>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <h3>
+                    <b>Insight:</b> <tt>Chanakya's</tt> Reward function doesn't assume anything about the hardware
+                </h3>
+                <p class="text-justify">
+                <center>
+                    <tt>Chanakya</tt> learns to select configurations that can improve streaming perception performance on an edge devices like NVidia Jetson Xavier AGX and NX.
+                </center> 
+                </p>                
+            </div>
+            
+            <div class="col-md-10 col-lg-6 col-sm-6">
+                <img width="80%" src="images/agx.png"></img>
+            </div>
+            <div class="col-md-10 col-lg-6 col-sm-6">
+                <img width="80%" src="images/nx.png"></img>
+            </div>
+        
+        </div>
+
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <h3>
+                    <b>Feature:</b> Extrinsic contexts like process contention can easily be included
+                </h3>
+                <p class="text-justify">
+                <center></center> 
+                </p>                
+                <br>
+                <center>
+                    <img width="60%" src="images/rl_vs_static_contention.jpg">
+                </center>
+                </img>
+            </div>
+        </div>
+
+        <!-- <div class="row">
+            <div class="col-md-10 col-md-offset-1" style="background: #f0f7ff">
+                <h2>Citation</h2>
+                    <code>
+                        @article{ghosh2021adaptive, <br>
+                            &nbsp;  title={Adaptive streaming perception using deep reinforcement learning}, <br>
+                            &nbsp;  author={Ghosh, Anurag and Nambi, Akshay and Singh, Aditya and Yvs, Harish and Ganu, Tanuja}, <br>
+                            &nbsp;  journal={arXiv preprint arXiv:2106.05665}, <br>
+                            &nbsp;  year={2021}, <br>
+                        }
+                    </code>
+            </div>
+        </div> -->
+
+    </div>
+</body>
+</html>
