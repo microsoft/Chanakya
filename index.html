@@ -41,12 +41,12 @@
     <div class="container" id="main">
         <div class="row">
             <h2 class="col-md-12 text-center">
-                <b>Chanakya: Learning Runtime Decisions for Adaptive Real-Time Perception</br></b>
+                <b>Chanakya: Learning Runtime Decisions for Adaptive Real-Time Perception</b>
             </h2>
         </div>
         <div class="row">
             <h3 class="col-md-12 text-center">
-                <b>NeurIPS 2023</br></b>
+                <b>NeurIPS 2023</b>
             </h3>
         </div>
         <div class="row">
@@ -79,9 +79,9 @@
 
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
-                <h3>
+                <h2>
                     Abstract
-                </h3>
+                </h2>
                 <p class="text-justify">
                     Real-time perception requires planned resource utilization. Computational planning in real-time perception is governed by two considerations - accuracy and latency. There exist run-time decisions (e.g. choice of input resolution) that induce tradeoffs affecting performance on a given hardware, arising from intrinsic (content, e.g. scene clutter) and extrinsic (system, e.g. resource contention) characteristics. Earlier runtime execution frameworks employed rule-based decision algorithms and operated with a fixed algorithm latency budget to balance these concerns, which is sub-optimal and inflexible. We propose <tt>Chanakya</tt>, a learned approximate execution framework that naturally derives from the streaming perception paradigm, to automatically learn decisions induced by these tradeoffs instead. <tt>Chanakya</tt> is trained via novel rewards balancing accuracy and latency implicitly, without approximating either objectives. <tt>Chanakya</tt> simultaneously considers intrinsic and extrinsic context, and predicts decisions in a flexible manner. <tt>Chanakya</tt>, designed with low overhead in mind, outperforms state-of-the-art static and dynamic execution policies on public datasets on both server GPUs and edge devices
                 </p>
@@ -90,30 +90,61 @@
 
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
-                <h3>
-                    Our Framework
-                </h3>
+                <h2>
+                    Problem
+                </h2>
                 <p class="text-justify">
-                <center></center> 
+                    In this work, we tackle the <b>Streaming Perception</b> problem.
                 </p>                
-                <br>
                 <center>
-                    <img width="80%" src="images/overall.png"></img>
+                    <img width="110%" src="images/Chanakya-Slides-Problem.png"></img>
                 </center>
             </div>
         </div>
 
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
-                <h3>
+                <h2>
+                    Motivation
+                </h2>
+                <p class="text-justify">
+                    Multiple optimal configurations exist that satisfy the real-time requirements (33ms) of a real-time perception system. By learning the optimal configuration depending on the environment, can we improve the streaming perception performance ?
+                    <br><br>
+                </p>                
+                <br>
+                <center>
+                    <img width="60%" src="images/plot_tradeoff_results_argoverse_faster_rcnn_tracktor_faster_rcnn.png"></img>
+                </center>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <h2>
+                    Our Framework - <tt>Chanakya</tt>
+                </h2>
+                <h3 class="text-justify">
+                <center></center> 
+                </h3>                
+                <br>
+                <center>
+                    <img width="100%" src="images/MainFig.png"></img>
+                </center>
+                <br><br>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <h2>
                     <b>Result:</b> Performance improvement without additional model training
-                </h3>
+                </h2>
                 <p class="text-justify">
                 <center></center> 
                 </p>                
                 <br>
                 <center>
-                    <img width="80%" src="images/sapvsmap.jpg">
+                    <img width="80%" src="images/sap_vs_map.png">
                 </center>
                 </img>
             </div>
@@ -148,10 +179,10 @@
             </div>
             
             <div class="col-md-10 col-lg-6 col-sm-6">
-                <img width="80%" src="images/agx.png"></img>
+                <img width="100%" src="images/agx.png"></img>
             </div>
             <div class="col-md-10 col-lg-6 col-sm-6">
-                <img width="80%" src="images/nx.png"></img>
+                <img width="100%" src="images/nx.png"></img>
             </div>
         
         </div>
@@ -166,26 +197,30 @@
                 </p>                
                 <br>
                 <center>
-                    <img width="60%" src="images/rl_vs_static_contention.jpg">
+                    <img width="80%" src="images/rl_vs_static_random_contention.png">
                 </center>
                 </img>
+                <br><br
             </div>
         </div>
 
-        <!-- <div class="row">
+        <div class="row">
+            <h3 class="col-md-10 col-md-offset-1">
+                To cite our work, please use the following BibTex:
+            </h3>
             <div class="col-md-10 col-md-offset-1" style="background: #f0f7ff">
                 <h2>Citation</h2>
                     <code>
-                        @article{ghosh2021adaptive, <br>
-                            &nbsp;  title={Adaptive streaming perception using deep reinforcement learning}, <br>
-                            &nbsp;  author={Ghosh, Anurag and Nambi, Akshay and Singh, Aditya and Yvs, Harish and Ganu, Tanuja}, <br>
-                            &nbsp;  journal={arXiv preprint arXiv:2106.05665}, <br>
-                            &nbsp;  year={2021}, <br>
+                        @inproceedings{ghosh2023chanakya, <br>
+                            &nbsp;  title={Chanakya: Learning Runtime Decisions for Adaptive Real-Time Perception}, <br>
+                            &nbsp;  author={Ghosh, Anurag and Balloli, Vaibhav and Nambi, Akshay and Singh, Aditya and Ganu, Tanuja}, <br>
+                            &nbsp;  booktitle={Advances in Neural Information Processing Systems}, <br>
+                            &nbsp;  year={2023}, <br>
                         }
                     </code>
             </div>
-        </div> -->
-
+        </div>
+        <br><br><br>
     </div>
 </body>
 </html>
